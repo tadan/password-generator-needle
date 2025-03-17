@@ -1,100 +1,67 @@
 .slider {
-    position: relative;
-    width: 100%;
-    padding: 0.5rem 0 1.5rem;
+  position: relative;
+  width: 100%;
+  padding: 0.5rem 0 1.5rem;
 }
 
 .slider--disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .slider__track {
-    position: relative;
-    height: 0.25rem;
-    width: 100%;
-    background-color: rgb(var(--theme-light-palette-primary-border-weak));
-    border-radius: 0.125rem;
-    cursor: pointer;
+  position: relative;
+  height: 0.25rem;
+  width: 100%;
+  background-color: rgb(var(--theme-light-palette-primary-border-weak));
+  border-radius: 0.125rem;
+  cursor: pointer;
 }
 
 .slider__track-fill {
-    position: absolute;
-    height: 100%;
-    background-color: rgb(
-        var(--theme-light-palette-primary-bg-strong)
-    ); /* Darker blue for the filled track */
-    border-radius: 0.125rem;
-    left: 0;
+  position: absolute;
+  height: 100%;
+  background-color: rgb(
+    var(--theme-light-palette-primary-bg-strong)
+  ); /* Darker blue for the filled track */
+  border-radius: 0.125rem;
+  left: 0;
 }
 
 .slider__thumb {
-    position: absolute;
-    width: 1.25rem;
-    height: 1.25rem;
-    background-color: rgb(
-        var(--theme-light-palette-primary-bg-strong)
-    ); /* Dark blue matching the track fill */
-    border-radius: 50%;
-    top: 0.05rem; /* Adjusted to center on the track */
-    margin-left: -0.5rem; /* Half of width to center */
-    cursor: grab;
-    box-shadow: var(--theme-light-box-shadow-raised);
-    transition: var(--transitions-full-slow);
+  position: absolute;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: rgb(
+    var(--theme-light-palette-primary-bg-strong)
+  ); /* Dark blue matching the track fill */
+  border-radius: 50%;
+  top: 0.05rem; /* Adjusted to center on the track */
+  margin-left: -0.5rem; /* Half of width to center */
+  cursor: grab;
+  box-shadow: var(--theme-light-box-shadow-raised);
+  transition: var(--transitions-full-slow);
 }
 
 /* Focus state */
 .slider__thumb:focus {
-    box-shadow: 0 0 0 0.125rem rgb(var(--theme-light-palette-primary-focus)); /* focus state blue */
-    outline: none;
+  box-shadow: 0 0 0 0.125rem rgb(var(--theme-light-palette-primary-focus)); /* focus state blue */
+  outline: none;
 }
 
 /* Hover state */
 .slider__thumb:hover {
-    background-color: rgb(
-        var(--theme-light-palette-primary-hover-strong)
-    ); /* slightly darker blue */
+  background-color: rgb(var(--theme-light-palette-primary-hover-strong)); /* slightly darker blue */
 }
 
 /* Active/dragging state */
 .slider__thumb--dragging {
-    cursor: grabbing;
-    background-color: rgb(
-        var(--theme-light-palette-primary-pressed-strong)
-    ); /* even darker blue for dragging */
+  cursor: grabbing;
+  background-color: rgb(
+    var(--theme-light-palette-primary-pressed-strong)
+  ); /* even darker blue for dragging */
 }
 
 .slider__thumb:active {
-    cursor: grabbing;
-}
-
-/* Hiding min/max values */
-.slider__values span:first-child,
-.slider__values span:last-child {
-    display: none;
-}
-
-/* Style for the current value */
-.slider__values span:nth-child(2) {
-    display: none; /* Hide the middle value */
-}
-
-/* Add styles for the title and value display that matches the design */
-.slider-container {
-    width: 100%;
-    padding: 10px;
-}
-
-.slider-title {
-    font-size: var(--font-size-subheading-small);
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-    color: #000;
-}
-
-.slider-value {
-    font-size: var(--font-size-subheading-medium);
-    font-weight: 600;
-    text-align: right;
-    color: rgb(var(--theme-light-palette-primary-text));
+  cursor: grabbing;
 }
